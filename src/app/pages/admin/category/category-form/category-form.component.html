@@ -1,0 +1,33 @@
+<div class="mat-elevation-z8">
+
+    <form [formGroup]="categoryForm" novalidate>
+
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+            <mat-error *ngIf="categoryForm.controls.name.errors?.required">This field is required</mat-error>
+            <mat-error *ngIf="categoryForm.controls.name.errors?.minlength">This field is too short (min lenght is {{categoryForm.controls.name.errors?.minlength.requiredLength}})</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <textarea matInput matTextareaAutosize matAutosizeMaxRows="10" matAutosizeMinRows="3" formControlName="description"></textarea>
+            <mat-error *ngIf="categoryForm.controls.description.errors?.required">This field is required</mat-error>
+            <mat-error *ngIf="categoryForm.controls.description.errors?.minlength">This field is too short (min lenght is {{categoryForm.controls.description.errors?.minlength.requiredLength}})</mat-error>
+        </mat-form-field>
+
+    </form>
+
+</div>
+
+<div class="actions">
+
+    <button type="submit" mat-raised-button (click)="onSubmit()" color="primary" [disabled]="!categoryForm.valid">
+        <mat-icon>done</mat-icon> Save
+    </button>
+
+    <button mat-raised-button color="accent" (click)="onCancel()">
+        <mat-icon>list</mat-icon> List Categories
+    </button>
+
+</div>
