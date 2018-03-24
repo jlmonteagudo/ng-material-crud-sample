@@ -1,7 +1,7 @@
 import { ApiResponse } from './../../../../services/common/apiResponse';
 import { catchError, finalize } from 'rxjs/operators';
 import { DataSource, CollectionViewer } from '@angular/cdk/collections';
-import { Category } from '../../../../services/category/Category';
+import { Category } from '../../../../services/category/category';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';

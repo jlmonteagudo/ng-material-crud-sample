@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
-import { Category } from '../../../../services/category/Category';
+import { Category } from '../../../../services/category/category';
 import { CategoryService } from '../../../../services/category/category.service';
 import { CommerceMessageData } from '../../../../components/common/commerce-message-dialog/commerce-message-data';
 import { CommerceMessageDialogComponent } from '../../../../components/common/commerce-message-dialog/commerce-message-dialog.component';

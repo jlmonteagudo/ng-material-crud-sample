@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
-import { Category } from '../../../../services/category/Category';
+import { Category } from '../../../../services/category/category';
 
 @Component({
   selector: 'app-category-form',

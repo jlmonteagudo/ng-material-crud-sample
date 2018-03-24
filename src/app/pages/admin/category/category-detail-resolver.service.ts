@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { Category } from '../../../services/category/Category';
 import { CategoryService } from '../../../services/category/category.service';
+import { Category } from '../../../services/category/category';
 
 @Injectable()
 export class CategoryDetailResolver implements Resolve<Category> {

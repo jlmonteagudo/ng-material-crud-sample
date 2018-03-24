@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 import { Router, ActivatedRoute } from '@angular/router';
 import { MatSort, MatTableDataSource, MatPaginator, MatDialog } from '@angular/material';
 import { CategoryService } from '../../../../services/category/category.service';
-import { Category } from '../../../../services/category/Category';
+import { Category } from '../../../../services/category/category';
 import { CategoryListDataSource } from './category-list.datasource';
 import { Observable } from 'rxjs/Observable';
 import { tap, debounceTime, distinctUntilChanged } from 'rxjs/operators';

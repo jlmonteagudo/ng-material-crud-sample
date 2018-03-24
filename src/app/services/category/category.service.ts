@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http'
 import { catchError } from 'rxjs/operators';
 import { Observable } from 'rxjs/Observable';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
-import { Category } from './Category';
+import { Category } from './category';
 import { environment } from '../../../environments/environment';
 import { ServiceError } from './../common/serviceError';
 import { ApiResponse } from '../common/apiResponse';

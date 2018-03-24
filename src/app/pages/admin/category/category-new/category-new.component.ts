@@ -4,7 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { CategoryService } from './../../../../services/category/category.service';
 import { CommerceMessageDialogComponent } from '../../../../components/common/commerce-message-dialog/commerce-message-dialog.component';
 import { CommerceMessageData } from '../../../../components/common/commerce-message-dialog/commerce-message-data';
-import { Category } from '../../../../services/category/Category';
+import { Category } from '../../../../services/category/category';
 
 @Component({
   selector: 'app-category-new',
