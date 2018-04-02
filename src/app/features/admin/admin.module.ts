@@ -5,17 +5,16 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 import { CategoryListComponent } from './category/category-list/category-list.component';
 import { AdminComponent } from './admin.component';
-import { CommerceMaterialModule } from '../../commerce-material.module';
-import { DemoComponent } from './demo/demo.component';
 import { CategoryNewComponent } from './category/category-new/category-new.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppMaterialModule } from '../../app-material.module';
 
 @NgModule({
   imports: [
     CommonModule,
     AdminRoutingModule,
-    CommerceMaterialModule
+    AppMaterialModule
   ],
-  declarations: [AdminComponent, DemoComponent, DashboardComponent]
+  declarations: [AdminComponent, DashboardComponent]
 })
 export class AdminModule { }

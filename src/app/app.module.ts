@@ -1,14 +1,15 @@
+import { UiModule } from './ui/ui.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { CommerceMaterialModule } from './commerce-material.module';
 import { AppRoutingModule } from './app-routing.module';
-import { NotFoundComponent } from './pages/common/not-found/not-found.component';
-import { IndexComponent } from './pages/common/index/index.component';
-import { AdminModule } from './pages/admin/admin.module';
+import { NotFoundComponent } from './features/common/not-found/not-found.component';
+import { IndexComponent } from './features/common/index/index.component';
+import { AdminModule } from './features/admin/admin.module';
 import { ServicesModule } from './services/services.module';
+import { AppMaterialModule } from './app-material.module';
 
 
 @NgModule({
@@ -20,10 +21,11 @@ import { ServicesModule } from './services/services.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    CommerceMaterialModule,
+    AppMaterialModule,
     AppRoutingModule,
     AdminModule,
-    ServicesModule
+    ServicesModule,
+    UiModule
   ],
   bootstrap: [AppComponent]
 })

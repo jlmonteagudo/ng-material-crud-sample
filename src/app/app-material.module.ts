@@ -17,9 +17,6 @@ import {MatButtonModule,
   MatSortModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { CommerceMessageDialogComponent } from './components/common/commerce-message-dialog/commerce-message-dialog.component';
-import { CommerceYesNoDialogComponent } from './components/common/commerce-yesno-dialog/commerce-yesno-dialog.component';
-
 
 @NgModule({
   imports: [
@@ -59,7 +56,7 @@ import { CommerceYesNoDialogComponent } from './components/common/commerce-yesno
     MatPaginatorModule,
     MatSortModule
   ],
-  declarations: [CommerceMessageDialogComponent, CommerceYesNoDialogComponent],
-  entryComponents: [CommerceMessageDialogComponent, CommerceYesNoDialogComponent]
+  declarations: [],
+  entryComponents: []
 })
-export class CommerceMaterialModule { }
+export class AppMaterialModule { }

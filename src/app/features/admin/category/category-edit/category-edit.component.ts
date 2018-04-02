@@ -3,8 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { Category } from '../../../../services/category/category';
 import { CategoryService } from '../../../../services/category/category.service';
-import { CommerceMessageData } from '../../../../components/common/commerce-message-dialog/commerce-message-data';
-import { CommerceMessageDialogComponent } from '../../../../components/common/commerce-message-dialog/commerce-message-dialog.component';
+import { AppMessageData } from '../../../../ui/dialogs/app-message-dialog/app-message-data';
+import { AppMessageDialogComponent } from '../../../../ui/dialogs/app-message-dialog/app-message-dialog.component';
 
 @Component({
   selector: 'app-category-edit',
@@ -34,14 +34,14 @@ export class CategoryEditComponent {
   }
 
   private onEditCategorySuccess = (value: any) => {
-    const message = new CommerceMessageData('Edit Category', 'Category updated successfully', 'done', 'success');
-    this.dialog.open(CommerceMessageDialogComponent, {data: message});
+    const message = new AppMessageData('Edit Category', 'Category updated successfully', 'done', 'success');
+    this.dialog.open(AppMessageDialogComponent, {data: message});
     this.router.navigate(['../../'], { relativeTo: this.route });
   }
 
   private onNewCategoryError = (error: any) => {
-    const message = new CommerceMessageData('Error Category', error.message, 'error_outline', 'error');
-    this.dialog.open(CommerceMessageDialogComponent, {data: message});
+    const message = new AppMessageData('Error Category', error.message, 'error_outline', 'error');
+    this.dialog.open(AppMessageDialogComponent, {data: message});
   }
 
 }

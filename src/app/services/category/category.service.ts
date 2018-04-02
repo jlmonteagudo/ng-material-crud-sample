@@ -5,9 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 import { Category } from './category';
 import { environment } from '../../../environments/environment';
-import { ServiceError } from './../common/serviceError';
-import { ApiResponse } from '../common/apiResponse';
-import { Sort } from '../common/sort';
+import { Sort, ApiResponse, ServiceError } from '../common';
 
 @Injectable()
 export class CategoryService {

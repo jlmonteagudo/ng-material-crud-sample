@@ -7,11 +7,11 @@ import { CategoryListDataSource } from './category-list.datasource';
 import { Observable } from 'rxjs/Observable';
 import { tap, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { fromEvent } from 'rxjs/observable/fromEvent';
-import { Sort } from '../../../../services/common/sort';
-import { CommerceYesNoDialogComponent } from '../../../../components/common/commerce-yesno-dialog/commerce-yesno-dialog.component';
-import { CommerceYesNoData } from '../../../../components/common/commerce-yesno-dialog/commerce-yesno-data';
-import { CommerceMessageData } from '../../../../components/common/commerce-message-dialog/commerce-message-data';
-import { CommerceMessageDialogComponent } from '../../../../components/common/commerce-message-dialog/commerce-message-dialog.component';
+import { AppMessageData } from '../../../../ui/dialogs/app-message-dialog/app-message-data';
+import { AppMessageDialogComponent } from '../../../../ui/dialogs/app-message-dialog/app-message-dialog.component';
+import { AppYesNoData } from '../../../../ui/dialogs/app-yesno-dialog/app-yesno-data';
+import { AppYesNoDialogComponent } from '../../../../ui/dialogs/app-yesno-dialog/app-yesno-dialog.component';
+import { Sort } from '../../../../services/common';
 
 @Component({
   selector: 'app-category-list',
@@ -59,8 +59,8 @@ export class CategoryListComponent implements OnInit, AfterViewInit {
 
   private confirmDeletion(category: Category) {
     // tslint:disable-next-line:max-line-length
-    const message = new CommerceYesNoData('Delete Category?', `Are you sure that you want to delete ${category.name}?`, 'question_answer', 'question');
-    this.dialog.open(CommerceYesNoDialogComponent, {data: message})
+    const message = new AppYesNoData('Delete Category?', `Are you sure that you want to delete ${category.name}?`, 'question_answer', 'question');
+    this.dialog.open(AppYesNoDialogComponent, {data: message})
       .afterClosed()
       .subscribe((hasToDelete: boolean) => {
         if (hasToDelete) {
@@ -69,14 +69,14 @@ export class CategoryListComponent implements OnInit, AfterViewInit {
       });
 
       const onDeleteCategorySuccess = (value: any) => {
-        const deleteMessage = new CommerceMessageData('Delete Category', 'Category deleted successfully', 'done', 'success');
-        this.dialog.open(CommerceMessageDialogComponent, {data: deleteMessage});
+        const deleteMessage = new AppMessageData('Delete Category', 'Category deleted successfully', 'done', 'success');
+        this.dialog.open(AppMessageDialogComponent, {data: deleteMessage});
         this.find();
       };
 
       const onDeleteCategoryError = (error: any) => {
-        const deleteMessage = new CommerceMessageData('Delete Category', error.message, 'error_outline', 'error');
-        this.dialog.open(CommerceMessageDialogComponent, {data: deleteMessage});
+        const deleteMessage = new AppMessageData('Delete Category', error.message, 'error_outline', 'error');
+        this.dialog.open(AppMessageDialogComponent, {data: deleteMessage});
       };
 
   }

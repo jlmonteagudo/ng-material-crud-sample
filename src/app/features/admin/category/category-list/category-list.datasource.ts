@@ -1,4 +1,3 @@
-import { ApiResponse } from './../../../../services/common/apiResponse';
 import { catchError, finalize } from 'rxjs/operators';
 import { DataSource, CollectionViewer } from '@angular/cdk/collections';
 import { Category } from '../../../../services/category/category';
@@ -6,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { CategoryService } from '../../../../services/category/category.service';
-import { Sort } from '../../../../services/common/sort';
+import { ApiResponse, Sort } from '../../../../services/common';
 
 export class CategoryListDataSource implements DataSource<Category> {
 
